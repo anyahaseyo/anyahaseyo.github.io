@@ -1,0 +1,31 @@
+.block-demo {
+    background-color: aqua;
+    margin: 6px 0;
+    padding: 8px;
+
+    /*1 line*/
+   /* margin: 6px 0px; */
+    /*top/bottom left/right*/
+
+    /*1 line*/
+    /*margin: 6px 15px 10px 20px; */
+    /*top right bottom left*/
+}
+
+.inline-demo {
+    display: inline;
+    background-color: pink;
+    margin: 6px ;
+    padding: 4px;
+    width: 120px; /*ignored*/
+    height: 100px; /*ignored*/
+}
+
+.inline-block {
+    display: inline-block;
+    background-color: lightgreen;
+    margin: 6px ;
+    width: 120px;
+    height: 100px;
+    line-height: 50px;
+}

@@ -1,0 +1,26 @@
+/*parent */
+#one {
+    background-color: yellow; 
+    width: 500px; 
+    height: 500px;
+    margin: auto;
+    
+    display: flex;
+    flex-direction: column; /* children stack vertically */
+    justify-content: center; /*vertical center*/
+    align-items: center; /*horizontal center non-text*/
+    text-align: center; /*horizontol center text*/
+}
+
+/*child*/
+/* this child div height is lways 50% of its parents
+height */
+/*.two {
+    background-color: aqua; 
+    width: 300px; 
+    height: 50%;
+}*/
+
+img {
+    width: 70%;
+}

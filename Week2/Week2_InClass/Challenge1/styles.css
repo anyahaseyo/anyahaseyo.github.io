@@ -1,0 +1,131 @@
+/* styles.css - Challenge #1 (Skeleton) */
+
+/* Reset & tokens */
+* { box-sizing: border-box; }
+
+
+/* Base */
+html, body { height: 100%; }
+body{
+  margin: 0;
+  background: white;
+  color: black;
+  font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
+  line-height: 1.6;
+}
+
+/* Layout */
+.container{
+  max-width: 880px;
+  margin: 0 auto;
+  padding: 30px 30px;
+}
+
+/* Header */
+.site-header{ text-align: center; margin-bottom: 18px; }
+.site-header h1{
+  margin: 0 0 8px;
+  font-weight: 900;
+  color: red;
+  font-size: 64px; 
+}
+.park-name{ display:block; }     
+.tagline{
+  margin: 4px 0 24px;
+  color: gray;
+  font-style: italic;
+  font-size: 16px;
+}
+
+/* Hero / mascot card */
+.hero{ display:flex; justify-content:center; margin: 6px 0 20px; }
+.mascot-placeholder{
+  background: white;
+  padding: 20px;
+  border: 3px solid black;  
+  border-radius: 10px;      
+  width: min(88%, 360px);
+  display: grid; place-items: center;
+  box-shadow: 0 4px 16px rgba(0,0,0,.06);
+  transition: transform .25s ease;
+}
+.mascot-placeholder:hover{ transform: translateY(-2px) scale(1.015); }
+#mascot-image{ display:block; max-width:100%; height:auto; }
+
+/* About */
+.about{
+  background: #ffffffee;
+  border: 1px solid white;
+  border-radius: 12px;
+  padding: 18px 20px;
+  margin: 8px 0 24px;
+}
+.about h2{ margin: 0 0 12px; }
+.about p{ margin: 0 0 14px; }
+
+/* Actions */
+.actions{
+  display:flex; justify-content:center; gap:18px; flex-wrap:wrap;
+  margin: 16px 0 26px;
+}
+.actions button{
+  appearance:none; border:0; cursor:pointer;
+  color:#fff; font-weight: 800; letter-spacing:.2px;
+  padding: 14px 22px;
+  border-radius: 10px;                 /* pill */
+  min-width: 160px;
+  transition: transform .15s ease, box-shadow .2s ease, filter .15s ease;
+}
+
+.buy-tickets{
+  background: linear-gradient(180deg,#34d399 0%, #22c55e 100%);
+  box-shadow:
+    0 4px 10px rgba(0,0,0,.10),
+    0 0 20px rgba(58, 72, 101, 0.45);       /* green glow */
+}
+.make-donation{
+  background: linear-gradient(180deg,#6366f1 0%, #4338ca 100%);
+  box-shadow:
+    0 4px 10px rgba(0,0,0,.10),
+    0 0 22px rgba(247, 85, 209, 0.45);       /* purple glow */
+}
+
+/* Hover/active/focus dynamics */
+.actions button:hover{
+  transform: translateY(-2px);
+  filter: brightness(.97);
+}
+.buy-tickets:hover{
+  box-shadow: 0 8px 22px rgba(0,0,0,.18), 0 0 44px rgba(16,185,129,.65);
+}
+.make-donation:hover{
+  box-shadow: 0 8px 22px rgba(0,0,0,.18), 0 0 46px rgba(168,85,247,.65);
+}
+.actions button:active{ transform: translate(0); filter:none; }
+.actions button:focus-visible{ outline: 3px solid #111827; outline-offset: 2px; }
+
+/* Footer */
+.site-footer{
+  border-top: 1px solid var(--border);
+  margin-top: 28px;
+  padding-top: 16px;
+  text-align: center;
+  color: var(--muted);
+  font-size: .9rem;
+}
+
+/* Small screens: allow stacking when extra narrow */
+@media (max-width: 420px){
+  .actions{ gap:14px; }
+  .actions button{ width:100%; max-width:340px; }
+}
+
+/* Gentle breathing animation (respects reduced motion) */
+@media (prefers-reduced-motion: no-preference){
+  .actions button{ animation: breathe 3s ease-in-out infinite; }
+  .actions button:hover{ animation: none; }   /* user interaction takes over */
+}
+@keyframes breathe{
+  0%,100%{ transform: translateY(0) }
+  50%{ transform: translateY(-1px) }
+}
