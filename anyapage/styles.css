@@ -60,4 +60,14 @@ body {
   .links a:hover {
     background: lightblue;
   }
+  #anyaCarousel .carousel-inner {
+    height: 400px; /* fixed height for carousel */
+    overflow: hidden;
+  }
+  #anyaCarousel .carousel-item img {
+    height: 100%;      /* take full carousel height */
+    width: 100%;       /* take full carousel width */
+    object-fit: cover; /* cover container, cropping if needed */
+  }
+  
   
